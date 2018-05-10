@@ -1,0 +1,158 @@
+/**
+  清楚浏览器默认样式
+*/
+// 清除默认内边距和外边距
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+fieldset, lengend, button, input, textarea,
+th, td {
+  padding: 0;
+  margin: 0;
+}
+// 设置默认字体
+html, body,
+button, input, select, textarea { 
+  font: 14px/1 Tahoma, Helvetica, "\9ED1\4F53", "\5b8b\4f53", sans-serif;
+}
+
+// 设置默认高度及文本颜色
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  color: #000;
+}
+// 重置列表元素
+ul, ol {
+  list-style: none;
+}
+// 设置a标签的样式与文本样式
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+// 清除点击外边框
+a, button {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+}
+// 清除number输入框箭头
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+// 重置表格元素
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+// 重置 hr
+hr {
+  border: none;
+  height: 1px;
+}
+// ie6 不支持
+abbr[title], acronym[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+q:before, q:after {
+  content: '';
+}
+// 重置表单元素 for ie6
+legend {
+  color: #000;
+}
+
+// img 搭车：让链接里的 img 无边框
+fieldset, img {
+  border: none;
+}
+// 使得表单元素在ie下能继承字体大小（optgroup 无法扶正）
+button, input, select, textarea {
+  font-size: 100%;
+}
+// 将斜体扶正
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+// 统一等宽字体
+code, kbd, pre, samp, tt {
+  font-family: "Courier New", Courier, monospace;
+}
+// 小于12px的中文很难阅读，让small正常化
+small {
+  font-size: 14px;
+}
+// 清除浮动
+.clearFix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/**
+  弹出详情块
+*/
+#alertDetailBg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 998;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+#alertDetailContent {
+  overflow: hidden;
+  position: fixed;
+  left: 50%;
+  top: 38.2%;
+  z-index: 999;
+  width: 478px;
+  min-height: 200px;
+  padding: 20px;
+  margin: 0 0 0 -257px;
+  background: #fff;
+  border-radius: 5px;
+  font: 16px/26px 'Sim Hei';
+
+  p {
+    min-height: 100px;
+    margin: 20px;
+    text-align: center;
+    color: #000;
+  }
+  button {
+    border: none;
+    background: none;
+    color: #000;
+    cursor: pointer;
+  }
+  button#alertDetailClose {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+  }
+  button#alertDetailConfirm {
+    display: block;
+    width: 80px;
+    margin: 20px auto;
+    background: #8CD4F8;
+    border-radius: 5px;
+    line-height: 44px;
+    color: #fff;
+  }
+}
