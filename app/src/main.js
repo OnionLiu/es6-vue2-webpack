@@ -1,7 +1,7 @@
 
-// public assest
-import './assest/public/public.less';
-import './assest/public/public.js';
+// public assets
+import './assets/public/public.less';
+import './assets/public/public.js';
 
 // app
 import Vue from 'vue';

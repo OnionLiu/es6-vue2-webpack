@@ -1,11 +1,11 @@
 {
-  "name": "es6-vue2-webpack",
+  "name": "vue2-webpack",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open",
-    "prod": "set NODE_ENV='production' && webpack -p"
+    "dev": "webpack-dev-server --config build/webpack-dev-config.js --open",
+    "prod": "webpack --config build/webpack-prod-config.js -p"
   },
   "author": "OnionLiu",
   "license": "ISC",

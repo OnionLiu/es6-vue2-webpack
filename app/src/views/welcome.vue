@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import common from "../assest/public/public.js";
+import Common from "../assets/public/public.js";
 
 export default {
-  mounted() {
-    const Common = new common();
-    Common.setPublicFontSize(750);
+  created() {
+    const commoIns = new Common();
+    commoIns.setPublicFontSize(750);
   }
 }
 </script>

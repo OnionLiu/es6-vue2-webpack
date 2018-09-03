@@ -1,4 +1,4 @@
-class common {
+class Common {
   constructor () {
 
   }
@@ -150,4 +150,4 @@ class common {
   }
 }
 
-export default common;
+export default Common;
